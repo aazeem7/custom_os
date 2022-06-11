@@ -92,7 +92,7 @@ void terminal_putchar(char c)
 	if (c == '\n')
 	{
 		++terminal_row;
-		// terminal_column = 0;
+		terminal_column = -1;
 	}
 	if (++terminal_column == VGA_WIDTH)
 	{
@@ -120,6 +120,7 @@ void kernel_main(void)
 	terminal_initialize();
 
 	/* Newline support is left as an exercise. */
-	terminal_writestring("Hello to kernel World Azeem - V1!\n");
-	terminal_writestring("Next Line isn't it - V2\n");
+	terminal_writestring("1st String\n");
+	terminal_writestring("2nd String\n");
+	terminal_writestring("3rd String\n");
 }
